@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+<div class="col-xl-6 col-lg-10 col-md-10 col-sm-10 mx-auto center form p-4">
+<h4> Enter New Record</h4>
+
+<form class="row g-3 needs-validation" method="POST"  action="/newentry"  novalidate>
+<div class="msg">{{ msg }}</div>
+  <div class="col-md-10">
+    <label for="validationCustom01" class="form-label">Book Id</label>
+    <input type="text" name="bookid" class="form-control" id="validationCustom01">
+  </div>
+  <div class="col-md-10">
+    <label for="validationCustom01" class="form-label">Book Title</label>
+    <input type="text" name="booktitle" class="form-control" id="validationCustom02">
+  </div>
+  <div class="col-md-5">
+    <label for="validationCustom02" class="form-label">Author</label>
+    <input type="text" name="author" class="form-control" id="validationCustom03">
+  </div>
+ 
+  <div class="col-md-5">
+    <label for="validationCustom04" class="form-label">Category</label>
+    <select class="form-select" id="validationCustom04" name="category" required>
+      <option selected disabled value="">Choose...</option>
+      <option>Science</option>
+      <option>Friction</option>
+      <option>Technology</option>
+      <option>Non-Friction</option>
+      <option>Kids</option>
+      <option>Maths</option>
+      <option>Mind Games</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid Category.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label" >Avaibility Count</label>
+    <input type="number" class="form-control" name="avaibility" id="validationCustom05" >
+
+  </div>
+  
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+</div>
+</div>
+</div>
+
+{% endblock body %}

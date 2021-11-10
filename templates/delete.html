@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+<div class="col-xl-6 col-lg-10 col-md-10 col-sm-10 mx-auto center form p-4">
+<h4> Update Record</h4>
+
+<form class="row g-3 needs-validation" method="POST"  action="/deleteentry"  novalidate>
+<div class="msg">{{ msg }}</div>
+  <div class="col-md-10">
+    <label for="validationCustom01" class="form-label">Book Id</label>
+    <input type="text" name="bookid" class="form-control" id="validationCustom01">
+
+
+
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Delete</button>
+  </div>
+</form>
+</div>
+</div>
+</div>
+
+{% endblock body %}

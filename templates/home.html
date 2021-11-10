@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+<div class="col-xl-6 col-lg-10 col-md-10 col-sm-10 mx-auto center form p-4">
+
+<div class="d-grid gap-0 d-md-block" px-4>
+<div class="col-md-8">
+<div class="row">
+    <div class="col">
+        <form action="/newentryrender" >
+            <input type="submit" class="btn btn-primary"  name="newentry" Value="New">
+        </form>
+    </div>
+
+    <div class="col">
+        <form action="/updaterender">
+            <input type="submit" class="btn btn-primary"  name="newentry" Value="Update">
+        </form>
+    </div>
+
+    <div class="col">
+        <form action="/deleterendering">
+            <input type="submit" class="btn btn-primary"  name="newentry" Value="Delete">
+        </form>
+    </div>
+</div>
+</div>
+  <div>
+   <table class="table table-striped" cellspacing="0">
+      <tr>
+         <th width="300"><h6><b>Book ID</b></h6></th>
+          <th width="300"><h6><b>Book Title</b></h6></th>
+          <th width="300"><h6><b>Author</b></h6></th>
+          <th width="300"><h6><b>Category</b></h6></th>
+          <th width="50"><h6><b>Avaibility</b></h6></th>
+      </tr>
+      {% for item in data %}
+      <tr>
+          <td>{{item["id"]}}</td>
+         <td>{{item["booktitle"]}}</td>
+         <td>{{item["author"]}}</td>
+         <td>{{item["category"]}}</td>
+         <td>{{item["avaibility"]}}</td>
+
+       {% endfor %}
+   </table>
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+{% endblock body %}
+</div>
